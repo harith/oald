@@ -1,0 +1,7 @@
+Chrome extension for Oxford Advanced Learners Dictionary (OALD)
+
+Omnibox:
+    Type o <word> in the omnibox to look the meaning and usage of <word> in OALD.
+
+Control+click (not implemented yet):
+    Control+click on a word opens OALD page for the word.

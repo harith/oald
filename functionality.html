@@ -1,0 +1,15 @@
+<script>
+
+    var oaldWebsiteUrl = "http://www.oxfordadvancedlearnersdictionary.com/dictionary/";
+
+    // This event is fired with the user accepts the input in the omnibox.
+    chrome.omnibox.onInputEntered.addListener(
+        function(text) {
+            console.log('inputEntered: ' + text);
+            url = oaldWebsiteUrl + text;
+            tabOptions = { "url" : url, "selected" : true };
+            chrome.tabs.create(tabOptions);
+        });
+
+</script>
+

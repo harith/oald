@@ -9,7 +9,24 @@
             url = oaldWebsiteUrl + text;
             tabOptions = { "url" : url, "selected" : true };
             chrome.tabs.create(tabOptions);
-        });
+    });
+
+    function getClickHandler() {
+        return function(info, tab) {
+            url = oaldWebsiteUrl + info["selectionText"];
+            tabOptions = { "url" : url, "selected" : true };
+            chrome.tabs.create(tabOptions);
+        }
+    }
+
+    // Add context menu item
+    chrome.contextMenus.create({
+        "title" : "Look up OALD",
+        "type" : "normal",
+        "contexts" : ["selection"],
+        "onclick" : getClickHandler()
+    });
+
 
 </script>
 

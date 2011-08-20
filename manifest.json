@@ -4,5 +4,6 @@
     "description"       : "Look up the OALD definition of a word",
     "omnibox"           : { "keyword" : "o" }, 
     "background_page"   : "functionality.html",
+    "permissions"       : [ "contextMenus" ],
     "icons"             : { "16" : "oald.ico" }
 }

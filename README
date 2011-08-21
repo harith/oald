@@ -1,8 +1,9 @@
 Chrome extension for Oxford Advanced Learners Dictionary (OALD)
 
 Omnibox:
-    Type o <word> in the omnibox to look the meaning and usage of <word> in OALD website.
+    Type o <word> in the omnibox to look up the meaning and usage 
+    of <word> in OALD website.
 
 Context menu:
-    A context menu item "Look up OALD" can be seen whenever user right clicks on a word. This opens
-    a new tab with the meaning of word in OALD website
+    A context menu item "OALD definition of <word>" takes you 
+    to the OALD page for the selected <word>. 

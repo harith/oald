@@ -21,7 +21,7 @@
 
     // Add context menu item
     chrome.contextMenus.create({
-        "title" : "Look up OALD",
+        "title" : "OALD definition for '%s'",
         "type" : "normal",
         "contexts" : ["selection"],
         "onclick" : getClickHandler()

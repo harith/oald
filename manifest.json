@@ -1,6 +1,6 @@
 {
     "name"              : "Oxford Advanced Learners Dictionary",
-    "version"           : "0.1",
+    "version"           : "0.2",
     "description"       : "Look up the OALD definition of a word",
     "omnibox"           : { "keyword" : "o" }, 
     "background_page"   : "functionality.html",

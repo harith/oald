@@ -1,4 +1,4 @@
-<script>
+(function(arguments) {
 
     var oaldWebsiteUrl = "http://www.oxfordadvancedlearnersdictionary.com/dictionary/";
 
@@ -27,6 +27,4 @@
         "onclick" : getClickHandler()
     });
 
-
-</script>
-
+})();

@@ -1,9 +1,12 @@
 {
+    "manifest_version"  : 2,
     "name"              : "Oxford Advanced Learners Dictionary",
-    "version"           : "0.2",
+    "version"           : "0.3",
     "description"       : "Look up the OALD definition of a word",
     "omnibox"           : { "keyword" : "o" }, 
-    "background_page"   : "functionality.html",
+    "background"        : {
+        "scripts" : ["core.js"]
+    },
     "permissions"       : [ "contextMenus" ],
     "icons"             : { "16" : "oald.ico" }
 }

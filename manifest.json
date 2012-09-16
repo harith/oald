@@ -5,8 +5,14 @@
     "description"       : "Look up the OALD definition of a word",
     "omnibox"           : { "keyword" : "o" }, 
     "background"        : {
-        "scripts" : ["core.js"]
+        "scripts" : ["js/background.js"]
     },
+    "content_scripts"   : [
+        {
+            "matches" : ["http://*/*", "https://*/*" ],
+            "js"      : ["js/oald.js"]
+        }
+    ],
     "permissions"       : [ "contextMenus" ],
     "icons"             : { "16" : "oald.ico" }
 }

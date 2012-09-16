@@ -7,3 +7,7 @@ Omnibox:
 Context menu:
     A context menu item "OALD definition of <word>" takes you 
     to the OALD page for the selected <word>. 
+
+Content Script:
+    Double click on a word in any page to open the OALD definition 
+    page for the word.

@@ -1,0 +1,19 @@
+/* Resets */
+#oald-link, #oald-link * { margin: 0; padding: 0; }
+
+#oald-link {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.25em;
+    border: 1px solid black;
+    border-radius: 2px;
+    background: white;
+    font-size: 0.75em;
+    color: black;
+    font-family: sans-serif;
+}
+
+#oald-link img { vertical-align: middle; }
+
+#oald-link span { margin-left: 0.25em; display: none; }

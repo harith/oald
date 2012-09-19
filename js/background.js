@@ -24,6 +24,11 @@ chrome.contextMenus.create({
     "onclick" : getHandler()
 });
 
+
+/*
+    Receives messages from any call made using
+    chrome.extension.sendMessage( message , responseHandler );
+*/
 chrome.extension.onMessage.addListener(
     function(message, sender, sendResponse) {
         sendResponse({action: "Looking up " + message["selectionText"]});

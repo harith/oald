@@ -30,7 +30,7 @@
     document.body.appendChild(link);
 
     document.addEventListener('dblclick', function(e) {
-        var selection = window.getSelection().toString();
+        var selection = window.getSelection().toString().trim();
         if ( selection !== '' ) {
             link.href = oaldBaseURL + selection;
             link.style.left = e.pageX + 'px';

@@ -13,7 +13,7 @@
             "js"      : ["js/oald.js"]
         }
     ],
-    "permissions"       : [ "contextMenus" ],
+    "permissions"       : [ "contextMenus", "http://*.oxfordlearnersdictionaries.com/" ],
     "icons"             : { "16" : "oald.ico" },
     "web_accessible_resources" : ["oald.ico"]
 }

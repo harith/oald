@@ -7,13 +7,40 @@
         icon        = document.createElement('img'),
         helperText  = document.createElement('span');
 
-    var CSSObject = function(style) {
-        this.style = style;
-        this.inlineCSSText = function() {
-            var cssText = JSON.stringify(this.style);
-            return cssText.replace(/["}{]/g,'').replace(/,/g,';');
-        }
-    };
+    /* Utility functions 
+     *
+     * show, hide: These functions return functions so that 
+     *             they can be used as event listeners
+     */
+    var hide = function(element) {
+            return function() { element.style.display = 'none' };
+        },
+        show = function(element, displayType) {
+            return function() { element.style.display = displayType || DEFAULT_DISPLAY_STYLE };
+        },
+        CSSObject = function(style) {
+            this.style = style;
+            this.inlineCSSText = function() {
+                var cssText = JSON.stringify(this.style);
+                return cssText.replace(/["}{]/g,'').replace(/,/g,';');
+            }
+        };
+
+    /* OALD call */
+    var getWordDefinitions = function(e) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", this.href);
+        xhr.onreadystatechange = function() {
+            if ( xhr.readyState == 4 ) {
+                var div = document.createElement('div');
+                div.innerHTML = xhr.responseText;
+                var defs = div.querySelectorAll('.d');
+                for ( i in defs ) { console.log(defs[i].textContent); }
+            }
+        };
+        xhr.send();
+        e.preventDefault();
+    }
 
     /* To add inline CSS instead of CSS from a file. 
      * Inline CSS will override all other styles. */
@@ -30,9 +57,10 @@
             "font-size"         : "12px",
             "color"             : "black",
             "font-family"       : "sans-serif",
-            "z-index"           : "9999"
+            "z-index"           : "9999",
+            "cusror"            : "pointer"
         }),
-        linkIconStyle = new CSSObject({
+        iconStyle = new CSSObject({
             "margin"         : "0",
             "padding"        : "0",
             "vertical-align" : "middle"
@@ -44,24 +72,13 @@
             "display"     : "none"
         });
 
-    /* Utility functions 
-     *
-     * show, hide: These functions return functions so that 
-     *             they can be used as event listeners
-     */
-    var hide = function(element) {
-            return function() { element.style.display = 'none' };
-        },
-        show = function(element, displayType) {
-            return function() { element.style.display = displayType || DEFAULT_DISPLAY_STYLE };
-        };
-     
     link.id             = 'oald-link';
     link.target         = 'new';
     link.style.cssText  = linkStyle.inlineCSSText();
+    link.addEventListener('click', getWordDefinitions)
 
     icon.src            = chrome.extension.getURL('oald.ico');
-    icon.style.cssText  = linkIconStyle.inlineCSSText();
+    icon.style.cssText  = iconStyle.inlineCSSText();
 
     helperText.textContent   = 'see meaning';
     helperText.style.cssText = helperTextStyle.inlineCSSText();

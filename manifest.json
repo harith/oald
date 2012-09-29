@@ -10,8 +10,7 @@
     "content_scripts"   : [
         {
             "matches" : ["http://*/*", "https://*/*" ],
-            "js"      : ["js/oald.js"],
-            "css"     : ["css/oald.css"]
+            "js"      : ["js/oald.js"]
         }
     ],
     "permissions"       : [ "contextMenus" ],

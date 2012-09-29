@@ -29,7 +29,8 @@
             "background"        : "white",
             "font-size"         : "12px",
             "color"             : "black",
-            "font-family"       : "sans-serif"
+            "font-family"       : "sans-serif",
+            "z-index"           : "9999"
         }),
         linkIconStyle = new CSSObject({
             "margin"         : "0",
@@ -49,10 +50,10 @@
      *             they can be used as event listeners
      */
     var hide = function(element) {
-            return function() { console.log("hiding " + element); element.style.display = 'none' };
+            return function() { element.style.display = 'none' };
         },
         show = function(element, displayType) {
-            return function() { console.log("showing " + element); element.style.display = displayType || DEFAULT_DISPLAY_STYLE };
+            return function() { element.style.display = displayType || DEFAULT_DISPLAY_STYLE };
         };
      
     link.id             = 'oald-link';

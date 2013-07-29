@@ -95,7 +95,6 @@
         definitionsStyle = new CSSObject({
             "display"     : "none",
             "position"    : "fixed",
-            "background"  : "white",
             "color"       : "black",
             "font-size"   : "16px",
             "font-family" : "sans-serif",

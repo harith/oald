@@ -11,7 +11,8 @@
     padding     : 20px;
     text-align  : left;
     background-color : white;
-    box-shadow  : inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-top  : 1px solid hsla(0, 0%, 0%, 0.2);
+    box-shadow  : inset 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
 
 #oald-external {

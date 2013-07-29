@@ -1,0 +1,38 @@
+#oald-definitions {
+    box-sizing  : border-box;
+    display     : none;
+    position    : fixed;
+    color       : black;
+    font-family : sans-serif;
+    z-index     : 9999;
+    bottom      : 0;
+    left        : 0;
+    width       : 100%;
+    padding     : 20px;
+    text-align  : left;
+    background-color : white;
+    box-shadow  : inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#oald-external {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+#oald-external .oald-pronunciation {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#oald-definitions .d {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#oald-definitions .d:before {
+    content: '\232A';
+    font-weight: bold;
+    margin-right: 10px;
+}

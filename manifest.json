@@ -10,10 +10,11 @@
     "content_scripts"   : [
         {
             "matches" : ["http://*/*", "https://*/*" ],
-            "js"      : ["js/oald.js"]
+            "js"      : ["js/oald.js"],
+            "css"     : ["css/oald.css"]    
         }
     ],
-    "permissions"       : [ "contextMenus", "http://*.oxfordlearnersdictionaries.com/" ],
+    "permissions"       : [ "contextMenus", "https://*.oxfordlearnersdictionaries.com/" ],
     "icons"             : { "16" : "img/oald.ico" },
     "web_accessible_resources" : ["img/*"]
 }

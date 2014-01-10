@@ -3,7 +3,7 @@
     var DEFAULT_DISPLAY_STYLE = 'inline-block',
         RESET       = '<a href="#" target="new" id="oald-external"></a>',
         MAX_DEFS    = 3,
-        oaldBaseURL = 'https://oald8.oxfordlearnersdictionaries.com/dictionary/',
+        oaldBaseURL = 'http://oald8.oxfordlearnersdictionaries.com/dictionary/',
         definitions = document.createElement('div');
 
     definitions.id  = 'oald-definitions';

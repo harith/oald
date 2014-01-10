@@ -1,4 +1,4 @@
-var oaldWebsiteUrl = "https://www.oxfordadvancedlearnersdictionary.com/dictionary/";
+var oaldWebsiteUrl = "http://www.oxfordadvancedlearnersdictionary.com/dictionary/";
 
 /* Omnibox functionality */
 chrome.omnibox.onInputEntered.addListener(
